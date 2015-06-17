@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-05 14:38+0000\n"
-"PO-Revision-Date: 2015-06-05 17:38+0100\n"
+"PO-Revision-Date: 2015-06-15 19:40+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: openATV\n"
 "Language: de\n"
@@ -1884,6 +1884,9 @@ msgstr "DiSEqC-Befehl übertragen"
 msgid "Common Interface"
 msgstr "Common Interface"
 
+msgid "Common interface PIN Setup"
+msgstr "Common Interface PIN Setup"
+
 #
 msgid "Common Interface Assignment"
 msgstr "Common Interface-Zuweisung"
@@ -3752,6 +3755,18 @@ msgstr "Festplatten Einstellungen"
 #
 msgid "Hard disk standby after"
 msgstr "Festplatten-Standby nach"
+
+msgid "Hard disk standby in box standby after"
+msgstr "Festplatten-Standby wenn Box in Standby nach"
+
+msgid "Configure the hard disk drive to go to standby after the specified idle time when the box is in standby."
+msgstr "Hier können Sie bestimmen, nach welcher Zeit Ihre Festplatte in den Ruhezustand gehen soll, wenn sich die Box im Standby befindet."
+
+msgid "Same as in active"
+msgstr "Gleich wie bei Box aktiv"
+
+msgid "No standby"
+msgstr "Kein Standby"
 
 msgid "Hardware:"
 msgstr "Hardware:"
@@ -5751,6 +5766,9 @@ msgstr "Rotorbewegung"
 msgid "Positioner setup"
 msgstr "Rotoreinstellungen"
 
+msgid "Positioner Setup"
+msgstr "Rotoreinstellungen"
+
 #
 msgid "Positioner storage"
 msgstr "Positionsspeicher"
@@ -7563,6 +7581,9 @@ msgstr "Standby"
 
 #
 msgid "Standby / restart"
+msgstr "Standby / Neustart"
+
+msgid "Standby / Restart"
 msgstr "Standby / Neustart"
 
 #
@@ -12787,7 +12808,7 @@ msgstr "Einstellungen sichern"
 
 #: QuickLaunchMenu
 msgid "Quick Launch Menu"
-msgstr "Schnellstart Menü"
+msgstr "Schnellstartmenü"
 
 msgid "Setup your local network"
 msgstr "Konfiguration Netzwerk"
@@ -12902,6 +12923,12 @@ msgstr "Einstellungen uShare"
 
 msgid "Setup Telnet"
 msgstr "Einstellungen Telnet"
+
+msgid "RemoteTuner"
+msgstr "Entfernte Tuner"
+
+msgid "Setup Remote Tuner Server"
+msgstr "Einstellungen von entfernten Tuner-Servern"
 
 msgid "Manage network mounts"
 msgstr "Verwalten der Netzwerk Mounts"
