@@ -147,7 +147,6 @@ unsigned char ts_packet_get_payload_offset(unsigned char *ts_packet)
     return 4; // No adaptation, data starts directly after TS header
   }
 }
-/* */
 
 void eFilePushThreadDecorder::thread()
 {
@@ -479,8 +478,6 @@ RESULT eAMLTSMPEGDecoder::setAudioPID(int apid, int type)
 {
 	TRACE__
 	/* do not set an audio pid on decoders without audio support */
-	//if (!m_has_audio) apid = -1;
-
 	if ((m_apid != apid) || (m_atype != type))
 	{
 		m_changed |= changeAudio;
@@ -523,18 +520,6 @@ RESULT eAMLTSMPEGDecoder::setAudioChannel(int channel)
 	TRACE__
 	if (channel == -1)
 		channel = ac_stereo;
-	if (m_decoder == 0 && m_audio_channel != channel)
-	{
-/*
-		if (m_audio)
-		{
-			m_audio->setChannel(channel);
-			m_audio_channel=channel;
-		}
-		else
-			eDebug("eAMLTSMPEGDecoder::setAudioChannel but no audio decoder exist");
-*/
-	}
 	return 0;
 }
 
@@ -679,7 +664,7 @@ RESULT eAMLTSMPEGDecoder::play()
 					eDebug("[eAMLTSMPEGDecoder::play] Amlogic CODEC codec_init success !!!!!");
 					setAvsyncEnable(1);
 				}
-				m_threadDecoder.start(m_pvr_fd,&m_codec);
+				//m_threadDecoder.start(m_pvr_fd,&m_codec);
 			}
 			else
 			{
