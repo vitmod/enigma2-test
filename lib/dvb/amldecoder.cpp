@@ -398,11 +398,6 @@ eAMLTSMPEGDecoder::~eAMLTSMPEGDecoder()
 	m_changed = -1;
 	setState();
 
-	if(0 < m_video_dmx_fd)
-	{
-		::close(m_video_dmx_fd);
-		m_video_dmx_fd = -1;
-	}
 	if(0 < m_pvr_fd)
 	{
 		eDebug("%s() Closing DVR0 device ",__PRETTY_FUNCTION__);
@@ -490,30 +485,6 @@ RESULT eAMLTSMPEGDecoder::setVideoPID(int vpid, int type)
 			break;
 		}
 		eDebug("%s() vpid=%d, type=%d",__PRETTY_FUNCTION__, vpid, type);
-		char filename[32];
-		snprintf(filename, sizeof(filename), "/dev/dvb/adapter%d/demux%d", 0, 0);
-		m_video_dmx_fd =  ::open(filename, O_RDWR | O_CLOEXEC);
-		if(m_video_dmx_fd < 0)
-		{
-			perror("DEMUX DEVICE");
-			eDebug("%s() unable to open Demuxer device",__PRETTY_FUNCTION__);
-		}
-		else
-		{
-#if 0		
-			struct dmx_pes_filter_params pesFilterParams;
-			pesFilterParams.pid = vpid;
-			pesFilterParams.input = DMX_IN_FRONTEND;
-			pesFilterParams.output = DMX_OUT_TS_TAP;
-			pesFilterParams.pes_type = DMX_PES_OTHER;
-			pesFilterParams.flags = DMX_IMMEDIATE_START;
-			if (ioctl(m_video_dmx_fd, DMX_SET_PES_FILTER, &pesFilterParams) < 0)
-			{
-				perror("DMX_SET_PES_FILTER");
-				eDebug("%s() VPID unable to set DMX_SET_PES_FILTER",__PRETTY_FUNCTION__);
-			}
-#endif			
-		}
 	}
 	return 0;
 }
