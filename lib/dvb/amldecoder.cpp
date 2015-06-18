@@ -161,7 +161,7 @@ void eFilePushThreadDecorder::thread()
 //  Try with prio 50 (0..99) probably to high, and SCHED_RR as SCHED_FIFO may be too punishing
 //  In the worst case scenario try cpu affinity and switch to other core
 	sched_param sch;
-	int policy; 
+	int policy;
 //    pthread_getschedparam(native_handle(), &policy, &sch);
 	pthread_getschedparam(pthread_self(), &policy, &sch);
 	sch.sched_priority = 50;
@@ -236,7 +236,7 @@ void eFilePushThreadDecorder::thread()
 					continue;
 				else
 				{
-					ccs = 0;				
+					ccs = 0;
 					for (isize = 0; isize < len_ts; isize += 188)
 					{
 						if (m_buffer[isize + 3] & 0xC0)
@@ -264,7 +264,7 @@ void eFilePushThreadDecorder::thread()
 								// start a new batch in next cycle
 								ccs = 0;
 
-								// decrypt even packages 
+								// decrypt even packages
 								if (cs_fill_even)
 								{
 									cs_tsbbatch_even[cs_fill_even].data = NULL;
@@ -294,7 +294,7 @@ void eFilePushThreadDecorder::thread()
 							dvbcsa_bs_decrypt(cs_key_even, cs_tsbbatch_even, 184);
 							cs_fill_even = 0;
 						}
-						
+
 						// decrypt odd packages
 						if (cs_fill_odd)
 						{
@@ -310,12 +310,12 @@ void eFilePushThreadDecorder::thread()
 					do{
 						ret = codec_write(mp_codec, m_buffer + isize, len_ts - isize);
 						if (ret < 0) {
-							eDebug("[eFilePushThreadDecorder] codec write data failed, errno %d", errno);							
+							eDebug("[eFilePushThreadDecorder] codec write data failed, errno %d", errno);
 						}
-						else {						
+						else {
 							isize += ret;
 						}
-					}while(isize < len_ts);				
+					}while(isize < len_ts);
 					len_ts = 0;
 				}
 			}
@@ -551,18 +551,18 @@ RESULT eAMLTSMPEGDecoder::setSyncPCR(int pcrpid)
 	int fd;
 	char *path = "/sys/class/tsdemux/pcr_pid";
 	char  bcmd[16];
-	
+
 	TRACE__
 	eDebug("eAMLTSMPEGDecoder::setSyncPCR %d",pcrpid);
 	m_pcrpid = pcrpid;
-	
+
 	fd = open(path, O_CREAT | O_RDWR | O_TRUNC, 0644);
 	if (fd >= 0) {
 		sprintf(bcmd, "%d", pcrpid);
 		write(fd, bcmd, strlen(bcmd));
 		close(fd);
 	}
-	
+
 	return 0;
 }
 
@@ -677,7 +677,7 @@ int eAMLTSMPEGDecoder::setStbDemuxSourceHiu()
 int eAMLTSMPEGDecoder::setStbSource(int source)
 {
 	int fd;
-	char *path = "/sys/class/tsdemux/stb_source"; 
+	char *path = "/sys/class/tsdemux/stb_source";
 	char  bcmd[16];
 	fd = open(path, O_CREAT | O_RDWR | O_TRUNC, 0644);
 	if (fd >= 0) {

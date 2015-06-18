@@ -121,7 +121,7 @@ private:
 	int setDisplayAxis(int recovery);
 	int setStbSourceHiu();
 	int setStbDemuxSourceHiu();
-	int setStbSource(int source);	
+	int setStbSource(int source);
 	int parseParameter(const char *para, int para_num, int *result);
 	codec_para_t m_codec;
 
