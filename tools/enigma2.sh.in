@@ -107,7 +107,9 @@ fi
 ret=$?
 case $ret in
 	1)
-		/sbin/halt
+		echo "0" > /sys/class/leds/wetek\:blue\:wifiled/brightness
+		echo "0" > /sys/class/leds/wetek\:blue\:ethled/brightness
+		echo "mem" > /sys/power/state
 		;;
 	2)
 		/sbin/reboot
