@@ -72,7 +72,7 @@ class SymbolsCheckPoller:
 				open("/proc/stb/lcd/symbol_recording", "w").write("1")
 			else:
 				open("/proc/stb/lcd/symbol_recording", "w").write("0")
-		elif getBoxType() in ('ixussone', 'ixusszero', 'wetekplay'):
+		elif getBoxType() in ('ixussone', 'ixusszero'):
 			recordings = len(NavigationInstance.instance.getRecordings(False,Components.RecordingConfig.recType(config.recording.show_rec_symbol_for_rec_types.getValue())))
 			self.blink = not self.blink
 			if recordings > 0:
@@ -84,7 +84,7 @@ class SymbolsCheckPoller:
 					self.led = "0"
 			elif self.led == "1":
 				open("/proc/stb/lcd/powerled", "w").write("0")
-		elif getBoxType() in ('nano', 'nanoc'):
+		elif getBoxType() in ('nano', 'nanoc', 'wetekplay'):
 			recordings = len(NavigationInstance.instance.getRecordings(False,Components.RecordingConfig.recType(config.recording.show_rec_symbol_for_rec_types.getValue())))
 			self.blink = not self.blink
 			if recordings > 0:
