@@ -208,7 +208,8 @@ class RecordTimerEntry(timer.TimerEntry, object):
 			self.log(0, "Not enough free space to record")
 			return False
 		else:
-			self.log(0, "Found enough free space to record")
+			if debug:
+				self.log(0, "Found enough free space to record")
 			return True
 
 	def calculateFilename(self):
@@ -237,7 +238,8 @@ class RecordTimerEntry(timer.TimerEntry, object):
 			filename = ASCIItranslit.legacyEncode(filename)
 
 		self.Filename = Directories.getRecordingFilename(filename, self.MountPath)
-		self.log(0, "Filename calculated as: '%s'" % self.Filename)
+		if debug:
+			self.log(0, "Filename calculated as: '%s'" % self.Filename)
 		return self.Filename
 
 	def tryPrepare(self):
@@ -316,7 +318,8 @@ class RecordTimerEntry(timer.TimerEntry, object):
 			wasRecTimerWakeup = int(open("/tmp/was_rectimer_wakeup", "r").read()) and True or False
 
 		next_state = self.state + 1
-		self.log(5, "activating state %d" % next_state)
+		if debug:
+			self.log(5, "activating state %d" % next_state)
 
 		# print "[TIMER] activate called",time(),next_state,self.first_try_prepare,' pending ',self.messageBoxAnswerPending,' justTried ',self.justTriedFreeingTuner,' show ',self.messageStringShow,self.messageString #TODO remove
 
@@ -358,7 +361,8 @@ class RecordTimerEntry(timer.TimerEntry, object):
 						self.log(5, "zap to recording service")
 
 			if self.tryPrepare():
-				self.log(6, "prepare ok, waiting for begin")
+				if debug:
+					self.log(6, "prepare ok, waiting for begin")
 				if self.messageStringShow:
 					Notifications.AddNotification(MessageBox, _("In order to record a timer, a tuner was freed successfully:\n\n") + self.messageString, type=MessageBox.TYPE_INFO, timeout=20)
 				# create file to "reserve" the filename
@@ -577,24 +581,25 @@ class RecordTimerEntry(timer.TimerEntry, object):
 			NavigationInstance.instance.RecordTimer.saveTimer()
 			self.autostate = Screens.Standby.inStandby
 			minRT = self.end - self.begin > 3 # do not switch to standby/deepstandby, when timer ended and timer runtime is less than 3s (e.g. zap-timer without end time) -> currently obsolete (timer edit set AFTEREVENT.NONE if time difference < 1 mins)
+			isRecordTime = abs(NavigationInstance.instance.RecordTimer.getNextRecordingTime() - time()) <= 900 or NavigationInstance.instance.RecordTimer.getStillRecording()
 			if debug: print "[RECORDTIMER] self.autostate=%s" % self.autostate, "wasRecTimerWakeup=%s" % wasRecTimerWakeup, "self.wasInStandby=%s" % self.wasInStandby, "self.afterEvent=%s" % self.afterEvent, "minRT=%s" % minRT
 
-			if self.afterEvent == AFTEREVENT.STANDBY or (not wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby and minRT):
+			if self.afterEvent == AFTEREVENT.STANDBY or (self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby and (not wasRecTimerWakeup or (wasRecTimerWakeup and isRecordTime))):
 				if not Screens.Standby.inStandby: # not already in standby
 					Notifications.AddNotificationWithCallback(self.sendStandbyNotification, MessageBox, _("A finished record timer wants to set your\n%s %s to standby. Do that now?") % (getMachineBrand(), getMachineName()), timeout = 180)
 
-			if abs(NavigationInstance.instance.RecordTimer.getNextRecordingTime() - time()) <= 900 or abs(NavigationInstance.instance.RecordTimer.getNextZapTime() - time()) <= 900 or NavigationInstance.instance.RecordTimer.getStillRecording():
-				if (self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby and minRT)) or (self.afterEvent == AFTEREVENT.AUTO and wasRecTimerWakeup):
+			if isRecordTime or abs(NavigationInstance.instance.RecordTimer.getNextZapTime() - time()) <= 900:
+				if self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby) or (self.afterEvent == AFTEREVENT.AUTO and wasRecTimerWakeup):
 					print '[Timer] Recording or Recording due is next 15 mins, not return to deepstandby'
 				self.wasInStandby = False
 				return True
 			elif abs(NavigationInstance.instance.PowerTimer.getNextPowerManagerTime() - time()) <= 900 or NavigationInstance.instance.PowerTimer.isProcessing(exceptTimer = 0):
-				if (self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby and minRT)) or (self.afterEvent == AFTEREVENT.AUTO and wasRecTimerWakeup):
+				if self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby) or (self.afterEvent == AFTEREVENT.AUTO and wasRecTimerWakeup):
 					print '[Timer] PowerTimer due is next 15 mins or is actual currently active, not return to deepstandby'
 				self.wasInStandby = False
 				return True
 
-			if self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby and minRT):
+			if self.afterEvent == AFTEREVENT.DEEPSTANDBY or (wasRecTimerWakeup and self.afterEvent == AFTEREVENT.AUTO and self.wasInStandby):
 				if not Screens.Standby.inTryQuitMainloop: # no shutdown messagebox is open
 					if Screens.Standby.inStandby: # in standby
 						print "[RecordTimer] quitMainloop #1"
