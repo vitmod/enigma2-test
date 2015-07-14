@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-05 14:38+0000\n"
-"PO-Revision-Date: 2015-07-08 21:35+0100\n"
+"PO-Revision-Date: 2015-07-12 20:41+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: openATV\n"
 "Language: de\n"
@@ -2428,6 +2428,9 @@ msgstr "Ausschalten"
 
 msgid "Default"
 msgstr "Standard"
+
+msgid "< Default >"
+msgstr "< Standard >"
 
 msgid "Defaults"
 msgstr "Standards"
@@ -6806,6 +6809,9 @@ msgstr "Filmauswahl"
 msgid "Select audio track"
 msgstr "Tonspur auswählen"
 
+msgid "Subtitle selection"
+msgstr "Untertitel auswählen"
+
 #
 msgid "Select channel to record from"
 msgstr "Kanal auswählen, von dem aufgenommen werden soll"
@@ -7820,10 +7826,6 @@ msgstr "Untertitel-Sprachauswahl 3"
 
 msgid "Subtitle language selection 4"
 msgstr "Untertitel-Sprachauswahl 4"
-
-#
-msgid "Subtitle selection"
-msgstr "Untertitel Auswahl"
 
 msgid "Subtitle selection..."
 msgstr "Auswahl Untertitel..."
@@ -15442,7 +15444,7 @@ msgstr "Zeige Favoriten-Liste"
 
 #: ButtonSetup.py
 msgid "Show satellites list"
-msgstr "Zeige Sateliten-Liste"
+msgstr "Zeige Satelliten-Liste"
 
 #: ButtonSetup.py
 msgid "History back"
@@ -15588,7 +15590,7 @@ msgstr "RAM-Frei: %s MB"
 
 # AudioSelection.py
 msgid "Switch between Audio-, Subtitlepage"
-msgstr "Umschalten zwischen Audio-, Untertitelauswahl"
+msgstr "Umschalten zwischen Audio-, Untertitelauswahl, am Steuerkreuz"
 
 # InfoBar.py
 msgid "Yes, delete this movie and return to movie list"
@@ -15769,7 +15771,7 @@ msgstr "Teletext"
 
 #: ButtonSetup.py
 msgid "Show subservice selection"
-msgstr "Untertkanalmenü"
+msgstr "Unterkanalmenü"
 
 #: ButtonSetup.py
 msgid "Show subtitle selection"
@@ -15865,4 +15867,3 @@ msgstr "Umschalten"
 
 msgid "SCPC optimized search range"
 msgstr "SCPC optimierter Suchbereich"
-
