@@ -1,3 +1,4 @@
+from boxbranding import getBoxType
 from time import localtime, mktime
 from datetime import datetime
 import xml.etree.cElementTree
@@ -131,9 +132,7 @@ class SecConfigure:
 	def linkNIMs(self, sec, nim1, nim2):
 		print "link tuner", nim1, "to tuner", nim2
 		# for internally connect tuner A to B
-		if '7356' not in about.getChipSetString() and nim2 == (nim1 - 1):
-			self.linkInternally(nim1)
-		elif '7356' in about.getChipSetString():
+		if getBoxType() == 'vusolo2' or nim2 == (nim1 - 1):
 			self.linkInternally(nim1)
 		sec.setTunerLinked(nim1, nim2)
 
@@ -949,7 +948,7 @@ class NimManager:
 			if not (entry.has_key("has_outputs")):
 				entry["has_outputs"] = True
 			if entry.has_key("frontend_device"): # check if internally connectable
-				if path.exists("/proc/stb/frontend/%d/rf_switch" % entry["frontend_device"]) and id > 0:
+				if path.exists("/proc/stb/frontend/%d/rf_switch" % entry["frontend_device"]) and ((id > 0) or (getBoxType() == 'vusolo2')):
 					entry["internally_connectable"] = entry["frontend_device"] - 1
 				else:
 					entry["internally_connectable"] = None
@@ -1038,7 +1037,7 @@ class NimManager:
 			slots.append(self.nim_slots[slotid].internallyConnectableTo())
 		for type in self.nim_slots[slotid].connectableTo():
 			for slot in self.getNimListOfType(type, exception = slotid):
-				if self.hasOutputs(slot):
+				if self.hasOutputs(slot) and slot not in slots:
 					slots.append(slot)
 		# remove nims, that have a conntectedTo reference on
 		for testnim in slots[:]:

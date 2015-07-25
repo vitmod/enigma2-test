@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-05 14:38+0000\n"
-"PO-Revision-Date: 2015-07-12 20:41+0100\n"
+"PO-Revision-Date: 2015-07-23 18:17+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: openATV\n"
 "Language: de\n"
@@ -1773,7 +1773,7 @@ msgid "Choose the name of the file that holds the EPG data when the %s %s is shu
 msgstr "Wählen Sie den Dateinamen für die EPG-Daten, wenn die %s %s ausgeschaltetet wird. Das kann nützlich sein wenn mehrere Boxen verwendet werden."
 
 msgid "Choose time interval to which the graphics will be rounded off."
-msgstr "Wählen das Zeitraster, auf das die Grafiken gerundet werden."
+msgstr "Wählen Sie den Zeitintervall, auf den die Grafiken gerundet werden sollen."
 
 msgid "Choose to enable or disable DHCP."
 msgstr "DHCP ein- oder ausschalten."
@@ -3083,6 +3083,9 @@ msgstr "Wenn eingeschaltet, wird Timeshift automatisch aktiviert. Sie können bi
 msgid "Enable panic button"
 msgstr "Panik-Taste aktivieren"
 
+msgid "Panic channel"
+msgstr "Panik-Kanal"
+
 #
 msgid "Enable parental control"
 msgstr "Jugendschutz aktivieren"
@@ -3587,6 +3590,9 @@ msgstr "Genre"
 msgid "German"
 msgstr "Deutsch"
 
+msgid "German keyboard"
+msgstr "Deutsche Tastatur"
+
 msgid "Get latest experimental image"
 msgstr "Neuestes experimentelles Image erhalten"
 
@@ -3960,8 +3966,8 @@ msgid ""
 "Do not care about the bright shades now. They will be set up in the next step.\n"
 "If you are happy with the result, press OK."
 msgstr ""
-"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte Sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie "
-"den Kontrast Ihres Fernsehers soweit wie möglich.\n"
+"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte Sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie den Kontrast "
+"Ihres Fernsehers soweit wie möglich.\n"
 "Verringern Sie anschließend die Helligkeit soweit wie möglich. Stellen Sie dabei sicher, dass die beiden untersten Grauschattierungen erkennbar bleiben. Die hellen Schattierungen werden im folgenden Schritt eingestellt.\n"
 "Drücken Sie OK, wenn Sie mit dem Ergebnis zufrieden sind."
 
@@ -8389,7 +8395,7 @@ msgid "This option sets the picture flesh tones."
 msgstr "Diese Option bestimmt das Aussehen von Fleischtönen."
 
 msgid "This option sets the picture hue."
-msgstr "Diese Option bestimmt den Bildfarbe."
+msgstr "Diese Option bestimmt den Bildfarbton."
 
 msgid "This option sets the picture saturation."
 msgstr "Diese Option bestimmt die Farbsättigung."
@@ -8419,8 +8425,8 @@ msgid ""
 "In the next step, an NFI image file can be downloaded from the update server and saved on the USB stick.\n"
 "If you already have a prepared bootable USB stick, please insert it now. Otherwise plug in a USB stick with a minimum size of 64 MB!"
 msgstr ""
-"Dieses Plugin erzeugt einen USB-Stick, mit dessen Hilfe die Firmware Ihrer %s %s aktualisiert werden kann, ohne dass dafür eine Netzwerk- oder WLAN-Verbindung notwendig ist.Zuerst muss ein USB-Stick vorbereitet und bootfähig gemacht werden. Im nächsten Schritt kann eine "
-"NFI-Imagedatei vom Update-Server heruntergeladen und auf diesem Stick gespeichert werden.Wenn Sie bereits einen bootfähigen USB-Stick vorbereitet haben, stecken Sie ihn bitte jetzt ein. Anderenfalls stecken Sie bitte einen USB-Stick mit einer Mindestgröße von 64 MB ein."
+"Dieses Plugin erzeugt einen USB-Stick, mit dessen Hilfe die Firmware Ihrer %s %s aktualisiert werden kann, ohne dass dafür eine Netzwerk- oder WLAN-Verbindung notwendig ist.Zuerst muss ein USB-Stick vorbereitet und bootfähig gemacht werden. Im nächsten Schritt kann eine NFI-Imagedatei "
+"vom Update-Server heruntergeladen und auf diesem Stick gespeichert werden.Wenn Sie bereits einen bootfähigen USB-Stick vorbereitet haben, stecken Sie ihn bitte jetzt ein. Anderenfalls stecken Sie bitte einen USB-Stick mit einer Mindestgröße von 64 MB ein."
 
 #
 msgid "This plugin is installed."
@@ -13557,7 +13563,7 @@ msgid "Show OE Log"
 msgstr "Zeige OE Log"
 
 msgid "When enabled, a recording is allowed to interrupt live tv, when there are no free tuners."
-msgstr "Wenn aktiviert, darf eine Aufnahme das live TV unterbrechen, falls keine freien Tuner verfügbar sind."
+msgstr "Wenn aktiviert, darf eine Aufnahme das live TV unterbrechen, falls kein freier Tuner zur Verfügung steht."
 
 msgid "When enabled, a popup message will be shown when a movie has finished and the next one will start."
 msgstr "Wenn ausgewählt, wird eine Info angezeigt, sobald ein Film beendet ist und der nächste beginnt."
@@ -13669,11 +13675,11 @@ msgstr "Konfigurieren Sie die Schriftgröße."
 
 #
 msgid "Configure the width allocated to the picon."
-msgstr "Legen Sie die Breite zugewiesen der picons fest"
+msgstr "Legen Sie die Breite der zugewiesenen Picons fest."
 
 #
 msgid "Configure to show the channel names, picons, or both in the EPG."
-msgstr "Einstellung, um die Kanalnamen, picons oder beides in der EPG zeigen."
+msgstr "Einstellung, um die Kanalnamen, Picons oder beides im EPG anzuzeigen."
 
 #
 msgid "Configure the width allocated to the service name."
@@ -13738,7 +13744,7 @@ msgid "Recordings abort PIP"
 msgstr "Bild-in-Bild bei Aufnahmen beenden"
 
 msgid "When enabled, a recording is allowed to abort picture-in-picture mode, when there are no free tuners."
-msgstr "Wenn aktiviert, wird Bild-in-Bild bei Aufnahmen beendet, wenn keine freien Tuner vorhanden sind."
+msgstr "Wenn aktiviert, wird Bild-in-Bild bei Aufnahmen beendet, falls kein freier Tuner zur Verfügung steht."
 
 msgid "Use extended List"
 msgstr "Erweiterte Liste nutzen"
@@ -13780,7 +13786,7 @@ msgstr "Wenn ausgeählt, wird eine Info angezeigt, sobald eine Aufnahme startet.
 
 #
 msgid "When enabled, the lenght of each recording will be shown in the movielist (this might cause some additional loading time)."
-msgstr "Wenn ausgewählt, wird die Länge einer Aufnahme in der Filmliste angezeigt (dies kann die Ladezeit der Fimliste beinflussen)."
+msgstr "Wenn ausgewählt, wird die Länge einer Aufnahme in der Filmliste angezeigt (dies kann die Ladezeit der Fimliste beeinflussen)."
 
 #
 msgid "Configure the behavior when movie playback is started."
@@ -13959,7 +13965,7 @@ msgstr "Zeige Picons auf dem Display *"
 msgid "Shutdown in (mins)"
 msgstr "Herunterfahren nach (Minuten)"
 
-msgid "Tune and Focus"
+msgid "Tune and focus"
 msgstr "Tunen und Fokusieren"
 
 msgid "Movement"
@@ -14262,7 +14268,7 @@ msgstr "Wählen Sie, was geschehen soll, nachdem Ihre %s %s nicht ordnungsgemä�
 
 #
 msgid "Configure your NTP server."
-msgstr "Hier können Sie den NTP-Server zur Zeitsyncronisierung ändern."
+msgstr "Hier können Sie den NTP-Server zur Zeit-Synchronisierung ändern."
 
 # SoftwareManager
 msgid "Trying to download a new updatelist. Please wait..."
@@ -14417,8 +14423,8 @@ msgstr "Standard-Aufnahmetyp"
 
 msgid "Descramble & record ECM' gives the option to descramble afterwards if descrambling on recording failed. 'Don't descramble, record ECM' save a scramble recording that can be descrambled on playback. 'Normal' means descramble the recording and don't record ECM."
 msgstr ""
-"'entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden "
-"kann. 'normal' entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
+"'entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden kann. 'normal' "
+"entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
 
 msgid "Show warning when timeshift is stopped"
 msgstr "Zeige Warnung wenn Timeshift gestoppt wird"
@@ -14779,7 +14785,7 @@ msgid "Channel list cursor behavior"
 msgstr "Cursorverhalten"
 
 msgid "Configure the cursor behaviour in the channel selection list. When opening the channel selection list you can keep on the current service or already select up/down and you are able to revert the B+/B- buttons."
-msgstr "Position des Curors beim Öffnen der Kannliste festlegen. Auf dem laufenden Kanal oder einen Eintrag hoch/runter positionieren. Ausserdem kann die Belegung der B+/B- Tasten getauscht werden"
+msgstr "Position des Cursors beim Öffnen der Kanalliste festlegen. Auf dem laufenden Kanal oder einen Eintrag hoch/runter positionieren. Ausserdem kann die Belegung der B+/B- Tasten getauscht werden"
 
 msgid "Keep service"
 msgstr "Laufender Kanal"
@@ -15364,7 +15370,7 @@ msgid "Show time in 24 hour clock format."
 msgstr "Zeige Zeit im 24 Stunden Format."
 
 msgid "This option allows you to disable show Restart Network in Extensions list."
-msgstr "Diese Option erlaubt es Ihnen, Netzwerk-Neustart im Erweiterungsmenu anzuzeigen."
+msgstr "Diese Option erlaubt es Ihnen, Netzwerk-Neustart im Erweiterungsmenü anzuzeigen."
 
 msgid "Show record indicator"
 msgstr "Zeige Aufnahmeindikator"
@@ -15378,11 +15384,8 @@ msgstr "Konfigurieren ob und wie Sendernamen in der Senderliste gezeigt werden."
 msgid "Enable fallback remote receiver"
 msgstr "Aktiviere Reservereceiver"
 
-msgid ""
-"Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally (e.g. tuner is occupied or service type is unavailable on the local tuner. Specify complete URL including http:// and port number (normally ...:8001), e.g. http://"
-"second_box:8001."
-msgstr ""
-"Reserve-Enigma2-Receiver aktivieren der versucht wird wenn ein Sender lokal nicht empfangen werden kann. (z.B. wenn Tuner belegt oder Sender lokal nicht verfügbar ist). Gebe komplette URL inklusive http:// und Portnummer (normal ...:8001), e.g. http://zweite_box:8001."
+msgid "Enable remote enigma2 receiver to be tried to tune into services that cannot be tuned into locally (e.g. tuner is occupied or service type is unavailable on the local tuner. Specify complete URL including http:// and port number (normally ...:8001), e.g. http://second_box:8001."
+msgstr "Reserve-Enigma2-Receiver aktivieren der versucht wird wenn ein Sender lokal nicht empfangen werden kann. (z.B. wenn Tuner belegt oder Sender lokal nicht verfügbar ist). Gebe komplette URL inklusive http:// und Portnummer (normal ...:8001), e.g. http://zweite_box:8001."
 
 msgid "Fallback remote receiver URL"
 msgstr "Reservereceiver URL"
@@ -15390,8 +15393,7 @@ msgstr "Reservereceiver URL"
 msgid "URL of fallback remote receiver"
 msgstr "URL des Reservereceiver"
 
-msgid ""
-"Configure which tuner will be preferred for recordings, when more than one tuner is available. 'Disabled' would select a tuner based on preferred tuner in customise screen. 'Auto' would choose based on E2's default rules, ignoring preferred tuner in customise screen."
+msgid "Configure which tuner will be preferred for recordings, when more than one tuner is available. 'Disabled' would select a tuner based on preferred tuner in customise screen. 'Auto' would choose based on E2's default rules, ignoring preferred tuner in customise screen."
 msgstr "Konfiguriere welcher Tuner für Aufnahmen bevorzugt werden soll wenn mehr als ein Tuner verfügbar ist. 'Deaktiviert' verwendet den bevorzugten Tuner der unter Anpassen eingestellt ist. 'Auto' wählt den Tuner nach E2-Regeln und ignoriert die Einstellung in Anpassen."
 
 #: ButtonSetup.py
@@ -15867,3 +15869,166 @@ msgstr "Umschalten"
 
 msgid "SCPC optimized search range"
 msgstr "SCPC optimierter Suchbereich"
+
+msgid "Animations"
+msgstr "Animation"
+
+msgid "Setting"
+msgstr "Einstellungen"
+
+msgid "Disable Animations"
+msgstr "Animation Deaktivieren"
+
+msgid "Animation Speed"
+msgstr "Animations Geschwindigkeit"
+
+msgid "Animation Setup"
+msgstr "Animation - Einstellungen"
+
+msgid "Simple fade"
+msgstr "Einfaches Verblassen"
+
+msgid "Grow drop"
+msgstr "Von oben fallend"
+
+msgid "Grow from left"
+msgstr "Von Links einschiebend"
+
+msgid "Slide drop"
+msgstr "Von oben gleitend"
+
+msgid "Slide left to right"
+msgstr "Von links nach rechts"
+
+msgid "Slide top to bottom"
+msgstr "Von oben nach unten"
+
+msgid "Stripes"
+msgstr "Streifen"
+
+msgid "* current animation"
+msgstr "* gewählte Animation"
+
+# EPG
+msgid "Please wait while gathering data..."
+msgstr "Bitte warten, Daten werden eingelesen..."
+
+# Subtitle 5.1 ersetzt : Rewrap teletext subtitles
+msgid "Rewrap subtitles"
+msgstr "Untertitel neu formatieren"
+
+# Subtitle 5.1 ersetzt : Rewrap teletext subtitles description
+msgid "When enabled, reformat subtitles to match the width of the screen."
+msgstr "Wenn aktiviert, werden Untertitel auf die Größe des Bildschirms neu formatiert."
+
+# Subtitle neu 5.1
+msgid "External subtitle switch fonts"
+msgstr "Schriftart der externen Untertitel wechseln"
+
+# Subtitle neu 5.1
+msgid "Configure if the subtitle should switch between normal, italic, bold and bolditalic"
+msgstr "Hiermit können Sie einstellen, ob die Schriftart der externen Untertitel zwischen Normal, Italic, Bold und Bolditalic wechseln soll."
+
+# Subtitle neu 5.1  colorisation = colorization
+msgid "External subtitle dialog colorisation"
+msgstr "Farbige Dialoge bei externen Untertitel"
+
+# Subtitle neu 5.1
+msgid "Replace `- ` in dialogs with colored text per speaker (like teletext subtitles for the hearing impaired)"
+msgstr "Diese Option ersetzt `- ` durch farbigen Text je Sprecher in Dialogen (so wie bei Teletext Untertiteln für Hörgeschädigte)."
+
+# Customize neu 5.1
+msgid "Load unlinked userbouquets"
+msgstr "Lade nicht eingebundene Bouquets"
+
+# Customize neu 5.1
+msgid "When enabled enigma2 will load unlinked userbouquets. This means that userbouquets that are available, but not included in the bouquets.tv or bouquets.radio files, will still be loaded. This allows you for example to keep your own user bouquet while installed settings are upgraded"
+msgstr "Wenn Sie diese Option aktivieren, werden alle vorhandenen Bouquets geladen, auch wenn sie nicht in der bouquets.tv oder bouquets.radio enthalten sind. Dies erlaubt Ihnen z.B. Ihre eigenen Bouquets zu erhalten, wenn Upgrades der installierten Bouquets erfolgen."
+
+# Record neu 5.1
+msgid "never abort"
+msgstr "nie abbrechen"
+
+# Record neu 5.1
+msgid "ask user"
+msgstr "Benutzer fragen"
+
+# Record neu 5.1
+msgid "just abort, no message"
+msgstr "abbrechen, ohne Hinweis"
+
+# Record neu 5.1
+msgid "just abort, show message"
+msgstr "abbrechen, zeige Hinweis"
+
+# Record neu 5.1
+msgid "Recordings abort pseudo recordings"
+msgstr "Pseudo-Aufnahmen bei Aufnahmen beenden"
+
+# Record neu 5.1
+msgid "When enabled, a recording is allowed to abort pseudo recordings, when there are no free tuners."
+msgstr "Wenn aktiviert, werden pseudo Aufnahmen bei Aufnahmen beenden, falls kein freier Tuner zur Verfügung steht."
+
+# Record neu 5.1
+msgid "Recordings abort streaming"
+msgstr "Streaming bei Aufnahmen beenden"
+
+# Record neu 5.1
+msgid "When enabled, a recording is allowed to abort streaming, when there are no free tuners."
+msgstr "Wenn aktiviert, werden Streamings bei Aufnahmen beenden, falls kein freier Tuner zur Verfügung steht."
+
+# Record neu 5.1
+msgid "Show recording symbol depending on recording type"
+msgstr "Zeige Aufnahmesymbol, abhängig vom Aufnahmetyp"
+
+# Record neu 5.1
+msgid "Configure whether the 'recording' symbol (in the display skin and LCD skin) is visible for real recordings only or also for streaming and pseuso recordings (e.g. EPGrefresh)."
+msgstr "Konfigurieren Sie, ob das Aufnahmesymbol (im Display/LCD Skin) nur angezeigt werden soll bei realen Aufnahmen oder auch bei Streaming und pseudo Aufnahmen (z.B. EPGrefresh)."
+
+# Record neu 5.1
+msgid "Show warning before box restart based on recording type"
+msgstr "Zeige Warnung bei Neustart, abhängig vom Aufnahmetyp"
+
+# Record neu 5.1
+msgid "Configure for which types of recordings a warning about active recordings is shown when attempting to restart the box or the GUI."
+msgstr "Konfigurieren Sie, welcher Aufnahmetyp bei aktiven Aufnahmen eine Warnung zeigen soll, wenn ein Neustart der Box oder GUI erfolgen soll."
+
+# Record neu 5.1
+msgid "any recordings"
+msgstr "alle Aufnahmen"
+
+# Record neu 5.1
+msgid "real recordings"
+msgstr "echte Aufnahmen"
+
+# Record neu 5.1
+msgid "real recordings or streaming"
+msgstr "echte Aufnahmen / Streaming"
+
+# Record neu 5.1
+msgid "real or pseudo recordings"
+msgstr "echte/pseudo Aufnahmen"
+
+# Display neu 5.1
+msgid "Initial scroll delay"
+msgstr "Verzögerung vor Text-Durchlauf"
+
+# Display neu 5.1
+msgid "Delay in miliseconds before start of scrolling text on display."
+msgstr "Hier können Sie die Verzögerung (in Millisekunden) vor einem Text-Durchlauf auf dem Display einstellen."
+
+# Display neu 5.1
+msgid "Final scroll delay"
+msgstr "Verzögerung nach Text-Durchlauf"
+
+# Display neu 5.1
+msgid "Delay in miliseconds after finish scrolling text on display."
+msgstr "Hier können Sie die Verzögerung (in Millisekunden) nach einem Text-Durchlauf auf dem Display einstellen."
+
+# LCD Skin
+msgid "< Default with Picon >"
+msgstr "< Standard mit Picon >"
+
+# HelpMenu
+msgid "Show quickmenu..."
+msgstr "Schnellstartmenü anzeigen"
