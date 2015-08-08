@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: tuxbox-enigma 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-11-05 14:38+0000\n"
-"PO-Revision-Date: 2015-07-23 18:17+0100\n"
+"PO-Revision-Date: 2015-08-07 20:03+0100\n"
 "Last-Translator: mike99 <mike99@mail.to>\n"
 "Language-Team: openATV\n"
 "Language: de\n"
@@ -687,14 +687,6 @@ msgid "A small overview of the available icon states and actions."
 msgstr "Eine kurze Übersicht der verfügbaren Icon-Darstellungen und -Aktionen."
 
 #
-msgid ""
-"A timer failed to record!\n"
-"Disable TV and try again?\n"
-msgstr ""
-"Timeraufnahme fehlgeschlagen.\n"
-"Fernsehprogramm ändern und erneut versuchen?\n"
-
-#
 msgid "A/V settings"
 msgstr "Audio/Video"
 
@@ -1002,7 +994,7 @@ msgid "Always ask before sending"
 msgstr "Vor dem Senden immer nachfragen."
 
 msgid "Always show bouquets"
-msgstr "Bouquets immer anzeigen"
+msgstr "Favoriten immer anzeigen"
 
 #
 msgid "An empty filename is illegal."
@@ -1546,7 +1538,7 @@ msgstr "DVB-Untertitel zentrieren"
 
 #
 msgid "Change bouquets in quickzap"
-msgstr "Bouquets beim Quickzap wechseln"
+msgstr "Favoriten beim Quickzap wechseln"
 
 #
 msgid "Change pin code"
@@ -2261,6 +2253,9 @@ msgstr "Partitionserzeugung fehlgeschlagen"
 
 msgid "Croatian"
 msgstr "Kroatisch"
+
+msgid "Minimum send interval"
+msgstr "Minimaler Sendeintervall"
 
 msgid "Current CEC address"
 msgstr "Momentane CEC-Adresse"
@@ -3085,6 +3080,9 @@ msgstr "Panik-Taste aktivieren"
 
 msgid "Panic channel"
 msgstr "Panik-Kanal"
+
+msgid "Pressing the panic button will zap you to this channelnumber in your first bouquet."
+msgstr "Durch drücken der Panik-Taste, wird zu diesem Kanal in Ihrem ersten Bouquet umgeschaltet."
 
 #
 msgid "Enable parental control"
@@ -3966,8 +3964,7 @@ msgid ""
 "Do not care about the bright shades now. They will be set up in the next step.\n"
 "If you are happy with the result, press OK."
 msgstr ""
-"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte Sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie den Kontrast "
-"Ihres Fernsehers soweit wie möglich.\n"
+"Falls Ihr Fernseher über Helligkeits- oder Kontraststeigerung verfügt, deaktivieren Sie diese. Falls es eine \"Dynamik\"-Einstellung gibt, sollte Sie auf Standard gesetzt werden. Verändern Sie die Intensität der Hintergrundbeleuchtung nach Ihrem Geschmack. Verringern Sie den Kontrast Ihres Fernsehers soweit wie möglich.\n"
 "Verringern Sie anschließend die Helligkeit soweit wie möglich. Stellen Sie dabei sicher, dass die beiden untersten Grauschattierungen erkennbar bleiben. Die hellen Schattierungen werden im folgenden Schritt eingestellt.\n"
 "Drücken Sie OK, wenn Sie mit dem Ergebnis zufrieden sind."
 
@@ -4146,6 +4143,10 @@ msgstr "Fortgeschritten"
 
 #
 msgid "Internal flash"
+msgstr "Interner Flash"
+
+#
+msgid "Internal Flash"
 msgstr "Interner Flash"
 
 msgid "Internal hdd only"
@@ -4570,7 +4571,7 @@ msgstr "Menü"
 
 #: ButtonSetup.py
 msgid "List/Fav/PVR"
-msgstr ""
+msgstr "Liste/Fav/PVR"
 
 #: ButtonSetup.py
 msgid "List/Fav/PVR long"
@@ -4732,7 +4733,7 @@ msgstr "Multiplex"
 
 #
 msgid "Multisat"
-msgstr "Multisat"
+msgstr "Mehrere Satelliten"
 
 #
 msgid "Mute"
@@ -5234,7 +5235,7 @@ msgid "On end of movie"
 msgstr "Am Ende eines Films"
 
 msgid "On reaching the end of a file during playback, you can choose the box's behavior."
-msgstr "Am Ende einer Filmwiedergabe kann das Verhalten der %s %s bestimmt werden"
+msgstr "Am Ende einer Filmwiedergabe kann das Verhalten der Box bestimmt werden"
 
 msgid "On reaching the end of a file during playback, you can choose the box's behaviour."
 msgstr "Am Ende der Wiedergabe eines Filmes kann das Verhalten bestimmt werden."
@@ -6203,10 +6204,10 @@ msgid "Remanining & Elapsed"
 msgstr "Verbleibend & verstrichen"
 
 msgid "Remember service PIN"
-msgstr "Service PIN merken"
+msgstr "Service-PIN merken"
 
 msgid "Remember service PIN cancel"
-msgstr "Service PIN merken abbrechen"
+msgstr "Service-PIN merken abbrechen"
 
 msgid "Remember the settings for each folder"
 msgstr "Diese Einstellungen auf alle Ordner anwenden"
@@ -7019,7 +7020,7 @@ msgstr ""
 "Sender können in Favoriten gruppiert werden.\n"
 "Wenn aktiviert, kann beim Zappen die Favoritenliste gewechselt werden."
 
-msgid "Services may be grouped in bouquets. When enabled, you can use more then one bouquet."
+msgid "Services may be grouped in bouquets. When enabled, you can use more than one bouquet."
 msgstr ""
 "Sender können in Favoriten gruppiert werden.\n"
 "Wenn aktiviert, kann mehr als eine Favoritenliste benutzt werden."
@@ -8424,9 +8425,7 @@ msgid ""
 "First, a USB stick needs to be prepared so that it becomes bootable.\n"
 "In the next step, an NFI image file can be downloaded from the update server and saved on the USB stick.\n"
 "If you already have a prepared bootable USB stick, please insert it now. Otherwise plug in a USB stick with a minimum size of 64 MB!"
-msgstr ""
-"Dieses Plugin erzeugt einen USB-Stick, mit dessen Hilfe die Firmware Ihrer %s %s aktualisiert werden kann, ohne dass dafür eine Netzwerk- oder WLAN-Verbindung notwendig ist.Zuerst muss ein USB-Stick vorbereitet und bootfähig gemacht werden. Im nächsten Schritt kann eine NFI-Imagedatei "
-"vom Update-Server heruntergeladen und auf diesem Stick gespeichert werden.Wenn Sie bereits einen bootfähigen USB-Stick vorbereitet haben, stecken Sie ihn bitte jetzt ein. Anderenfalls stecken Sie bitte einen USB-Stick mit einer Mindestgröße von 64 MB ein."
+msgstr "Dieses Plugin erzeugt einen USB-Stick, mit dessen Hilfe die Firmware Ihrer %s %s aktualisiert werden kann, ohne dass dafür eine Netzwerk- oder WLAN-Verbindung notwendig ist.Zuerst muss ein USB-Stick vorbereitet und bootfähig gemacht werden. Im nächsten Schritt kann eine NFI-Imagedatei vom Update-Server heruntergeladen und auf diesem Stick gespeichert werden.Wenn Sie bereits einen bootfähigen USB-Stick vorbereitet haben, stecken Sie ihn bitte jetzt ein. Anderenfalls stecken Sie bitte einen USB-Stick mit einer Mindestgröße von 64 MB ein."
 
 #
 msgid "This plugin is installed."
@@ -8446,10 +8445,10 @@ msgstr "Dieses Plugin wird deinstalliert."
 
 #
 msgid ""
-"This test checks for configured Nameservers.\n"
+"This test checks for configured nameservers.\n"
 "If you get a \"unconfirmed\" message:\n"
-"- please check your DHCP, cabling and Adapter setup\n"
-"- if you configured your Nameservers manually please verify your entries in the \"Nameserver\" Configuration"
+"- please check your DHCP, cabling and adapter setup\n"
+"- if you configured your nameservers manually please verify your entries in the \"Nameserver\" configuration"
 msgstr ""
 "Dieser Test sucht nach konfigurierten Nameservern\n"
 "Wenn Sie eine \"Unbestätigt\"-Meldung erhalten:\n"
@@ -8458,7 +8457,7 @@ msgstr ""
 
 #
 msgid ""
-"This test checks whether a network cable is connected to your LAN-Adapter.\n"
+"This test checks whether a network cable is connected to your LAN adapter.\n"
 "If you get a \"disconnected\" message:\n"
 "- verify that a network cable is attached\n"
 "- verify that the cable is not broken"
@@ -8470,9 +8469,9 @@ msgstr ""
 
 #
 msgid ""
-"This test checks whether a valid IP Address is found for your LAN Adapter.\n"
+"This test checks whether a valid IP address is found for your LAN adapter.\n"
 "If you get a \"unconfirmed\" message:\n"
-"- no valid IP Address was found\n"
+"- no valid IP address was found\n"
 "- please check your DHCP, cabling and adapter setup"
 msgstr ""
 "Dieser Test überprüft, ob eine gültige IP-Adresse gefunden wurde.\n"
@@ -8482,12 +8481,12 @@ msgstr ""
 
 #
 msgid ""
-"This test checks whether your LAN Adapter is set up for automatic IP Address configuration with DHCP.\n"
+"This test checks whether your LAN adapter is set up for automatic IP address configuration with DHCP.\n"
 "If you get a \"disabled\" message:\n"
-" - then your LAN Adapter is configured for manual IP Setup\n"
-"- verify thay you have entered correct IP informations in the AdapterSetup dialog.\n"
-"If you get an \"enabeld\" message:\n"
-"-verify that you have a configured and working DHCP Server in your network."
+" - then your LAN adapter is configured for manual IP setup\n"
+"- verify thay you have entered correct IP informations in the adapter setup dialog.\n"
+"If you get an \"enabled\" message:\n"
+"-verify that you have a configured and working DHCP server in your network."
 msgstr ""
 "Dieser Test überprüft, ob Ihr Netzwerkadapter für automatische IP-Adressen-Konfiguration über DHCP eingerichtet ist.\n"
 "Wenn Sie eine \"Deaktiviert\"-Meldung erhalten:\n"
@@ -9095,7 +9094,7 @@ msgid "Use trashcan in movielist"
 msgstr "Papierkorb in Filmliste verwenden"
 
 #
-msgid "Use usals for this sat"
+msgid "Use USALS for this sat"
 msgstr "USALS für diesen Satelliten benutzen"
 
 #
@@ -11106,6 +11105,18 @@ msgstr "Kanal als Startkanal auswählen"
 msgid "stop using as startup service"
 msgstr "Kanal als Startkanal entfernen"
 
+# ChannelSelection.py
+msgid "Set startup service"
+msgstr "Startkanal auswählen"
+
+# ChannelSelection.py
+msgid "Only on startup"
+msgstr "Nur beim Start"
+
+# ChannelSelection.py
+msgid "Also on standby"
+msgstr "Auch im Standby"
+
 # Screens/ChannelSelection.py
 msgid "set as startup service from standby"
 msgstr "Kanal als Startkanal nach Standby auswählen"
@@ -12540,254 +12551,6 @@ msgstr "nicht entschlüsseln, ECM aufnehmen"
 msgid "The user interface of your %s %s is restarting"
 msgstr "Die Bedienoberfläche Ihrer %s %s wird neu gestartet"
 
-#: c:\POTEST/Blindscan/plugin.py:42
-msgid "Blindscan"
-msgstr "Hintergrundsuchlauf"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:78
-msgid "Scan"
-msgstr "Suchlauf "
-
-#: c:\POTEST/Blindscan/plugin.py:198
-msgid "up to 1 degree"
-msgstr "bis zu 1 Grad"
-
-#: c:\POTEST/Blindscan/plugin.py:199
-msgid "up to 2 degrees"
-msgstr "bis zu 2 Grad"
-
-#: c:\POTEST/Blindscan/plugin.py:200
-msgid "up to 3 degrees"
-msgstr "bis zu 3 Grad"
-
-#: c:\POTEST/Blindscan/plugin.py:202
-msgid "scan for channels"
-msgstr "Kanalsuchlauf"
-
-#: c:\POTEST/Blindscan/plugin.py:203
-msgid "save to XML file"
-msgstr "Speichere in XML Datei"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:224
-msgid "vertical and horizontal"
-msgstr "Vertikal und Horizontal"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:227
-msgid "circular right and circular left"
-msgstr "Rechts-zirkular & Links-zirkular"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:257
-msgid "Select a tuner that is configured for the satellite you wish to search"
-msgstr "Einen Tuner auswählen, der für den Satelliten eingerichtet ist,auf dem gesucht werden soll."
-
-#: c:\POTEST/Blindscan/plugin.py:269
-msgid "Select the satellite you wish to search"
-msgstr "Satellit für den Suchlauf auswählen"
-
-#: c:\POTEST/Blindscan/plugin.py:270 c:\POTEST/Blindscan/plugin.py:271
-msgid "Frequency values must be between 10700 and 12750 (or 3000 and 4200 in the case of C-band satellites)"
-msgstr "Frequenzwerte müssen zwischen 10700 und 12750 liegen (bzw. 3000 und 4200 für C-Band Satelliten)"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:272
-msgid "Polarisation"
-msgstr "Polarisation"
-
-#: c:\POTEST/Blindscan/plugin.py:272
-msgid "If you are not sure what polarisations the satellite you wish to search transmits, select \"vertical and horizontal\""
-msgstr "Wenn Sie sich nicht sicher sind, welche Polarisation der Satellit hat,  wählen Sie \"Vertikal und Horizontal \""
-
-#: c:\POTEST/Blindscan/plugin.py:273
-msgid "Symbol rate values are in megasymbols; enter a value between 1 and 44"
-msgstr "Symbolraten sind in tausender Werten angegeben, bitte einen Wert zwischen 2 und 44 eingeben."
-
-#: c:\POTEST/Blindscan/plugin.py:274
-msgid "Symbol rate values are in megasymbols; enter a value between 2 and 45"
-msgstr " Symbol rate values are in megasymbols; enter a value between 2 and 45"
-
-#: c:\POTEST/Blindscan/plugin.py:275
-msgid "If you select \"yes\" all channels on the satellite being search will be deleted before starting the current search"
-msgstr "Wenn Sie \"Ja\" auswählen, werden alle Sender des Satellitens gelöscht, auf dem der Suchlauf ausgeführt wird!"
-
-#
-#: c:\POTEST/Blindscan/plugin.py:276
-msgid "Only free scan"
-msgstr "Nur frei empfangbare"
-
-#: c:\POTEST/Blindscan/plugin.py:276
-msgid "If you select \"yes\" the scan will only save channels that are not encrypted; \"no\" will find encrypted and non-encrypted channels"
-msgstr "Wenn Sie \"Ja\" auswählen, wird der Suchlauf nur unverschlüsselte Sender finden; \"Nein\" findet alle Sender."
-
-#
-#: c:\POTEST/Blindscan/plugin.py:277
-msgid "Only scan unknown transponders"
-msgstr "Nur auf unbekannten Transpondern suchen"
-
-#: c:\POTEST/Blindscan/plugin.py:277
-msgid "If you select \"yes\" the scan will only search transponders not listed in satellites.xml"
-msgstr ""
-"Wenn Sie \"Ja\" auswählen, wird der Suchlauf nur auf Transpondern durchgeführt, \n"
-"\" \"die nicht in der satellites.xml enthalten sind."
-
-#: c:\POTEST/Blindscan/plugin.py:278
-msgid "Filter out adjacent satellites"
-msgstr "Filtere angrenzende Satelliten heraus"
-
-#: c:\POTEST/Blindscan/plugin.py:278
-msgid "When a neighbouring satellite is very strong this avoids searching transponders known to be coming from the neighbouring satellite"
-msgstr "Wenn ein benachbarter Satellit sehr stark ist, verhindert dies, das Transponder von diesem Satelliten durchsucht werden."
-
-#
-#: c:\POTEST/Blindscan/plugin.py:279
-msgid "Search type"
-msgstr "Suchlauftyp"
-
-#: c:\POTEST/Blindscan/plugin.py:279
-msgid "\"channel scan\" searches for channels and saves them to the receiver; \"save to XML file\" does a transponder search and saves found transponders to an XML file in satellites.xml format"
-msgstr "\"Kanalsuchlauf\" sucht nach Kanälen und speichert diese im Receiver; \"Speichere in XML Datei\" Sucht nach Transpondern und speichert dies im XML Format in der satellites.xml Datei."
-
-#: c:\POTEST/Blindscan/plugin.py:302
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Start symbol rate must be between 1MHz and 44MHz."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Startsymbolrate muss zwischen 2MHz und 44MHz liegen."
-
-#: c:\POTEST/Blindscan/plugin.py:305
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Stop symbol rate must be between 2MHz and 45MHz."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Endsymbolrate muss zwischen 2MHz und 45MHz liegen."
-
-#: c:\POTEST/Blindscan/plugin.py:308
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Symbol rate start value is larger than stop value."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Symbolrate: Startwert ist höher als Endwert."
-
-#: c:\POTEST/Blindscan/plugin.py:311
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Frequency start value is larger than stop value."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Frequenz: Startwert ist höher als Endwert."
-
-#: c:\POTEST/Blindscan/plugin.py:315 c:\POTEST/Blindscan/plugin.py:318
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"That is a C-band satellite so frequency values \n"
-"need to be between 3000MHz and 4200MHz."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Dies ist ein C-Band Satellit, somit müssen die Frequenzen \n"
-"zwischen 3000MHz und 4200MHz liegen."
-
-#: c:\POTEST/Blindscan/plugin.py:323 c:\POTEST/Blindscan/plugin.py:337
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Start frequency must be between 10700MHz and 12750MHz.\n"
-"(Or 3000MHz and 4200MHz in the case of c-band)."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Die Start Frequenz muss zwischen 10700MHz und 12750MHz liegen.\n"
-"(bzw. 3000MHz und 4200MHz im Falle von C-Band)."
-
-#: c:\POTEST/Blindscan/plugin.py:326
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"For C-band searches stop frequency must be between 3000MHz and 4200MHz."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Für einen C-Band Suchlauf muss die Stopp Frequenz zwischen \n"
-"3000Mhz und 4200MHz liegen."
-
-#: c:\POTEST/Blindscan/plugin.py:331 c:\POTEST/Blindscan/plugin.py:334
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"That is a Ku-band satellite so frequency values \n"
-"need to be between 10700MHz and 12750MHz."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Dies ist ein Ku-Band Satellit, somit müssen die Frequenzen \n"
-"zwischen 10700MHz und 12750MHz liegen."
-
-#: c:\POTEST/Blindscan/plugin.py:340
-msgid ""
-"Invalid parameters entered. Please correct and try again.\n"
-"Stop frequency must be between 10700MHz and 12750MHz.\n"
-"(Or 3000MHz and 4200MHz in the case of c-band)."
-msgstr ""
-"Ungültige Einstellungen. Bitte prüfen.\n"
-"Stopp Frequenz muss zwischen 10700MHz and 12750MHz liegen.\n"
-"(bzw. 3000MHz und 4200MHz im Falle von C-Band)."
-
-#: c:\POTEST/Blindscan/plugin.py:534
-#, python-format
-msgid ""
-"Looking for available transponders.\n"
-"This will take a short while.\n"
-"\n"
-"   Current Status : %d/%d\n"
-"   Satellite : %s\n"
-"   Polarization : %s\n"
-"   Frequency range : %d - %d MHz\n"
-"   Symbol rates : %d - %d MHz"
-msgstr ""
-"Suche nach verfügbaren Transpondern\n"
-"Das wird einige Minuten dauern.\n"
-"\n"
-"   Derzeitiger Status : %d / %d\n"
-"   Satellit :  %s\n"
-"   Polarisation : %s\n"
-"   Frequenz  :  %d - %d MHz\n"
-"   Symbolrate : %d - %d MHz"
-
-#: c:\POTEST/Blindscan/plugin.py:635
-#, python-format
-msgid ""
-"Search completed. %d transponders found.\n"
-"\n"
-"Details saved in:\n"
-"%s"
-msgstr ""
-"Suchlauf beendet. %d  Transponder gefunden. \n"
-"\n"
-"Details gespeichert in: \n"
-"%s"
-
-#: c:\POTEST/Blindscan/plugin.py:638
-msgid ""
-"No new transponders found! \n"
-"\n"
-"Only transponders already listed in satellites.xml \n"
-"have been found for those search parameters!"
-msgstr ""
-"Keine neuen Transponder gefunden! \n"
-"\n"
-"Mit dieser Suchlauf Einstellung wurden nur \n"
-"Transponder gefunden, die sich schon in der \n"
-"satellites.xml befinden!"
-
-#: c:\POTEST/Blindscan/plugin.py:642
-msgid "No transponders were found for those search parameters!"
-msgstr ""
-"Mit diesen Suchlauf Einstellungen wurden keine \n"
-"Transponder gefunden!"
-
-#: c:\POTEST/Blindscan/plugin.py:644
-msgid "The blindscan run was cancelled by the user."
-msgstr "Blind Scan durch Nutzer abgebrochen."
-
 #: Einstellunen Box Display
 msgid "Show time elapsed as positive"
 msgstr "Verstrichene Zeit mit positivem Vorzeichen"
@@ -13782,7 +13545,7 @@ msgstr "Die Angabe im EPG für eine Aufnahme wird entsprechend früher gestartet
 
 #
 msgid "When enabled, a popup message will be shown when a recording starts."
-msgstr "Wenn ausgeählt, wird eine Info angezeigt, sobald eine Aufnahme startet."
+msgstr "Wenn ausgewählt, wird eine Info angezeigt, sobald eine Aufnahme startet."
 
 #
 msgid "When enabled, the lenght of each recording will be shown in the movielist (this might cause some additional loading time)."
@@ -14366,8 +14129,29 @@ msgstr "Überspringe HDMI-EDID-Prüfung"
 msgid "This option allows you to bypass HDMI EDID check"
 msgstr "Diese Option erlaubt es, die HDMI-EDID-Überprüfung zu überspringen."
 
+# VideoEnhancement
 msgid "Color space"
 msgstr "Farbraum"
+
+# VideoEnhancement
+msgid "This option sets the picture color space."
+msgstr "Mit dieser Option kann der Farbraum eingestellt werden."
+
+# VideoEnhancement
+msgid "Scaler vertical dejagging"
+msgstr "Scaler vertikale Kantenglättung"
+
+# VideoEnhancement
+msgid "This option allows you enable the vertical scaler dejagging."
+msgstr "Mit dieser Option können Sie die vertikale Kantenglättung aktivieren."
+
+# VideoEnhancement
+msgid "Smooth"
+msgstr "Glätten"
+
+# VideoEnhancement
+msgid "This option allows you enable smoothing filter to control the dithering process."
+msgstr "Diese Option aktiviert den Glättungsfilter für das Dithering-Verfahren."
 
 msgid "InfoBar EPG mode"
 msgstr "EPG-Modus der Infoleiste"
@@ -14422,9 +14206,7 @@ msgid "Default recording type"
 msgstr "Standard-Aufnahmetyp"
 
 msgid "Descramble & record ECM' gives the option to descramble afterwards if descrambling on recording failed. 'Don't descramble, record ECM' save a scramble recording that can be descrambled on playback. 'Normal' means descramble the recording and don't record ECM."
-msgstr ""
-"'entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden kann. 'normal' "
-"entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
+msgstr "'entschlüsseln und ECM aufnehmen' ermöglicht es Ihnen die Aufnahme beim Abspielen zu entschlüsseln, wenn bei der Aufnahme die Entschlüsselung fehlschlägt. 'nicht entschlüsseln, ECM aufnehmen' speichert eine verschlüsselte Aufnahme, die beim Abspielen entschlüsselt werden kann. 'normal' entschlüsselt die Aufnahme ohne ECM's aufzunehmen."
 
 msgid "Show warning when timeshift is stopped"
 msgstr "Zeige Warnung wenn Timeshift gestoppt wird"
@@ -14766,15 +14548,15 @@ msgid "Set the MAC-address of your %s %s.\n"
 msgstr "Einstellen der MAC-Adresse Ihrer %s %s.\n"
 
 # NetworkSetup.py
-msgid "MAC-adress Setup"
-msgstr "MAC-Adresse Einstellungen"
+msgid "MAC-address settings"
+msgstr "MAC-Adresse einstellen"
 
 # NetworkSetup.py
-msgid "MAC-adress"
+msgid "MAC-address"
 msgstr "MAC-Adresse"
 
 # NetworkSetup.py
-msgid "Press OK to set the MAC-adress."
+msgid "Press OK to set the MAC-address."
 msgstr "Drücken Sie OK um die MAC-Adresse zu setzen."
 
 #
@@ -14784,7 +14566,12 @@ msgstr "Speichergeräte"
 msgid "Channel list cursor behavior"
 msgstr "Cursorverhalten"
 
+# 4.2 Version
 msgid "Configure the cursor behaviour in the channel selection list. When opening the channel selection list you can keep on the current service or already select up/down and you are able to revert the B+/B- buttons."
+msgstr "Position des Cursors beim Öffnen der Kanalliste festlegen. Auf dem laufenden Kanal oder einen Eintrag hoch/runter positionieren. Ausserdem kann die Belegung der B+/B- Tasten getauscht werden"
+
+# 5.1 Version
+msgid "Configure the cursor behaviour in the channel selection list. When opening the channel selection list you can remain on the current service or already select up/down and you are able to revert the B+/B- buttons."
 msgstr "Position des Cursors beim Öffnen der Kanalliste festlegen. Auf dem laufenden Kanal oder einen Eintrag hoch/runter positionieren. Ausserdem kann die Belegung der B+/B- Tasten getauscht werden"
 
 msgid "Keep service"
@@ -14809,7 +14596,7 @@ msgid "Allows you to adjust the amount of time the resolution infomation display
 msgstr "Hiermit können Sie einstellen, ob oder wie lange die Bildschirmeinblendung bei Auflösungsänderungen angezeigt werden soll."
 
 msgid "All resolutions"
-msgstr "Alle Auflösung"
+msgstr "Alle Auflösungen"
 
 msgid "only HD"
 msgstr "Nur bei HD"
@@ -15067,7 +14854,7 @@ msgstr "Filmliste"
 
 #
 msgid "Default (Instant Record)"
-msgstr "Default (Aufnahme hinzufügen)"
+msgstr "Standard (Aufnahme hinzufügen)"
 
 #
 msgid "Select Red-key action long"
@@ -15725,7 +15512,7 @@ msgstr "SAT lang"
 
 #: ButtonSetup.py
 msgid "Prov"
-msgstr ""
+msgstr "Prov"
 
 #: ButtonSetup.py
 msgid "Prov long"
@@ -15877,7 +15664,7 @@ msgid "Setting"
 msgstr "Einstellungen"
 
 msgid "Disable Animations"
-msgstr "Animation Deaktivieren"
+msgstr "Animation deaktivieren"
 
 msgid "Animation Speed"
 msgstr "Animations Geschwindigkeit"
@@ -15892,7 +15679,7 @@ msgid "Grow drop"
 msgstr "Von oben fallend"
 
 msgid "Grow from left"
-msgstr "Von Links einschiebend"
+msgstr "Von links einschiebend"
 
 msgid "Slide drop"
 msgstr "Von oben gleitend"
@@ -15931,7 +15718,7 @@ msgstr "Hiermit können Sie einstellen, ob die Schriftart der externen Untertite
 
 # Subtitle neu 5.1  colorisation = colorization
 msgid "External subtitle dialog colorisation"
-msgstr "Farbige Dialoge bei externen Untertitel"
+msgstr "Farbige Dialoge bei externen Untertiteln"
 
 # Subtitle neu 5.1
 msgid "Replace `- ` in dialogs with colored text per speaker (like teletext subtitles for the hearing impaired)"
@@ -15944,6 +15731,14 @@ msgstr "Lade nicht eingebundene Bouquets"
 # Customize neu 5.1
 msgid "When enabled enigma2 will load unlinked userbouquets. This means that userbouquets that are available, but not included in the bouquets.tv or bouquets.radio files, will still be loaded. This allows you for example to keep your own user bouquet while installed settings are upgraded"
 msgstr "Wenn Sie diese Option aktivieren, werden alle vorhandenen Bouquets geladen, auch wenn sie nicht in der bouquets.tv oder bouquets.radio enthalten sind. Dies erlaubt Ihnen z.B. Ihre eigenen Bouquets zu erhalten, wenn Upgrades der installierten Bouquets erfolgen."
+
+# channelselection 5.1
+msgid "Enable unlinked bouquets"
+msgstr "Nicht eingebundene Favoritenlisten laden"
+
+# channelselection 5.1
+msgid "When enabled, Enigma2 will load unlinked bouquets. This means that bouquets that are available, but not included in the bouquets.tv or bouquets.radio files, will still be loaded. This allows you for example to keep your own user bouquet while installed settings are upgraded"
+msgstr "Wenn Sie diese Option aktivieren, werden alle vorhandenen Favoritenlisten geladen, auch wenn sie nicht in der bouquets.tv oder bouquets.radio enthalten sind. Dies erlaubt Ihnen z.B. Ihre eigenen Favoritenlisten zu erhalten, wenn Upgrades der installierten Bouquets erfolgen."
 
 # Record neu 5.1
 msgid "never abort"
@@ -15967,7 +15762,7 @@ msgstr "Pseudo-Aufnahmen bei Aufnahmen beenden"
 
 # Record neu 5.1
 msgid "When enabled, a recording is allowed to abort pseudo recordings, when there are no free tuners."
-msgstr "Wenn aktiviert, werden pseudo Aufnahmen bei Aufnahmen beenden, falls kein freier Tuner zur Verfügung steht."
+msgstr "Wenn aktiviert, werden Pseudo-Aufnahmen bei Aufnahmen beendet, falls kein freier Tuner zur Verfügung steht."
 
 # Record neu 5.1
 msgid "Recordings abort streaming"
@@ -15975,23 +15770,23 @@ msgstr "Streaming bei Aufnahmen beenden"
 
 # Record neu 5.1
 msgid "When enabled, a recording is allowed to abort streaming, when there are no free tuners."
-msgstr "Wenn aktiviert, werden Streamings bei Aufnahmen beenden, falls kein freier Tuner zur Verfügung steht."
+msgstr "Wenn aktiviert, werden Streamings bei Aufnahmen beendet, falls kein freier Tuner zur Verfügung steht."
 
-# Record neu 5.1
+# data/setup.xml
 msgid "Show recording symbol depending on recording type"
 msgstr "Zeige Aufnahmesymbol, abhängig vom Aufnahmetyp"
 
-# Record neu 5.1
+# data/setup.xml
 msgid "Configure whether the 'recording' symbol (in the display skin and LCD skin) is visible for real recordings only or also for streaming and pseuso recordings (e.g. EPGrefresh)."
-msgstr "Konfigurieren Sie, ob das Aufnahmesymbol (im Display/LCD Skin) nur angezeigt werden soll bei realen Aufnahmen oder auch bei Streaming und pseudo Aufnahmen (z.B. EPGrefresh)."
+msgstr "Legt fest, ob das Aufnahme-Symbol (auf Bildschirm und LCD Display) nur bei echten Aufnahmen sichtbar ist oder auch bei Streaming bzw. Pseudo-Aufnahmen (z.B. EPG Refresh)"
 
-# Record neu 5.1
+# data/setup.xml
 msgid "Show warning before box restart based on recording type"
 msgstr "Zeige Warnung bei Neustart, abhängig vom Aufnahmetyp"
 
-# Record neu 5.1
+# data/setup.xml
 msgid "Configure for which types of recordings a warning about active recordings is shown when attempting to restart the box or the GUI."
-msgstr "Konfigurieren Sie, welcher Aufnahmetyp bei aktiven Aufnahmen eine Warnung zeigen soll, wenn ein Neustart der Box oder GUI erfolgen soll."
+msgstr "Legt fest, ob beim Neustart eine Warnung wegen laufender Aufnahmen nur bei echten Aufnahmen erfolgt oder auch bei Streaming bzw. Pseudo-Aufnahmen (z.B. EPG Refresh)"
 
 # Record neu 5.1
 msgid "any recordings"
@@ -16007,7 +15802,7 @@ msgstr "echte Aufnahmen / Streaming"
 
 # Record neu 5.1
 msgid "real or pseudo recordings"
-msgstr "echte/pseudo Aufnahmen"
+msgstr "echte/Pseudo-Aufnahmen"
 
 # Display neu 5.1
 msgid "Initial scroll delay"
@@ -16032,3 +15827,250 @@ msgstr "< Standard mit Picon >"
 # HelpMenu
 msgid "Show quickmenu..."
 msgstr "Schnellstartmenü anzeigen"
+
+# RecordTimer.py
+msgid ""
+"A timer failed to record!\n"
+"Disable PIP and try again?\n"
+msgstr ""
+"Eine Timer-Aufnahme konnte nicht gestartet werden.\n"
+"PIP deaktivieren und erneut versuchen?\n"
+
+# RecordTimer.py
+msgid ""
+"A timer failed to record!\n"
+"Abort pseudo recordings (e.g. EPG refresh) and try again?\n"
+msgstr ""
+"Eine Timer-Aufnahme konnte nicht gestartet werden.\n"
+"Pseudo-Aufnahmen (z.B. EPG Refresh) beenden und erneut versuchen?\n"
+
+# RecordTimer.py
+msgid ""
+"A timer failed to record!\n"
+"Disable TV and try again?\n"
+msgstr ""
+"Eine Timer-Aufnahme konnte nicht gestartet werden.\n"
+"TV-Sender umschalten und erneut versuchen?\n"
+
+# RecordTimer.py
+msgid ""
+"In order to record a timer, a tuner was freed successfully:\n"
+"\n"
+msgstr ""
+"Um eine Timer-Aufnahme zu starten, wurde erfolgreich ein Tuner frei gemacht:\n"
+"\n"
+
+# RecordTimer.py
+msgid "The TV was switched to the recording service!\n"
+msgstr "Es wurde auf den Sender umgeschaltet, auf dem die Aufnahme läuft.\n"
+
+# RecordTimer.py
+msgid ""
+"No tuner is available for recording a timer!\n"
+"\n"
+"The following methods of freeing a tuner were tried without success:\n"
+"\n"
+msgstr ""
+"Eine Timer-Aufnahme konnte nicht gestartet werden, da kein Tuner verfügbar war.\n"
+"\n"
+"Folgende Maßnahmen wurden versucht, jedoch ohne Erfolg:\n"
+"\n"
+
+# RecordTimer.py
+msgid "No tuner is available for recording a timer!\n"
+msgstr "Eine Timer-Aufnahme konnte nicht gestartet werden.\n"
+
+# RecordTimer.py
+msgid "Disabled PIP.\n"
+msgstr "PIP wurde deaktiviert.\n"
+
+# RecordTimer.py
+msgid "Tried to disable PIP, suddenly found no InfoBar.instance.\n"
+msgstr "Beim Versuch, PIP zu deaktivieren, wurde keine InfoBar.instance gefunden.\n"
+
+# RecordTimer.py
+msgid "Aborted a pseudo recording.\n"
+msgstr "Eine Pseudo-Aufnahme wurde deaktiviert.\n"
+
+# /data/setup.xml
+msgid "Include AIT in recordings"
+msgstr "Integriere AIT-Daten in Aufnahmen"
+
+# /data/setup.xml
+msgid "If enabled, AIT data is included in recordings."
+msgstr ""
+"Wenn aktiviert,\n"
+"sind in den Aufzeichnungen AIT-Daten enthalten."
+
+#
+msgid "Blindscan"
+msgstr "Hintergrundsuchlauf"
+
+#
+msgid "Scan"
+msgstr "Suchlauf "
+
+#
+msgid "scan for channels"
+msgstr "Kanalsuchlauf"
+
+#
+msgid "Only free scan"
+msgstr "Nur frei empfangbare"
+
+#
+msgid "Multisat all select"
+msgstr "Alle Satelliten"
+
+# satconfig.py
+msgid "Extra motor options"
+msgstr "Spezielle Motoroptionen"
+
+# satconfig.py
+msgid "Horizontal turning speed"
+msgstr "Horizontale Drehgeschwindigkeit"
+
+# satconfig.py
+msgid "Vertical turning speed"
+msgstr "Vertikale Drehgeschwindigkeit"
+
+# satconfig.py
+msgid "Turning step size"
+msgstr "Dreh-Schrittweite"
+
+# satconfig.py
+msgid "Max memory positions"
+msgstr "Max. Speicherpositionen"
+
+# Satconfig.py
+msgid "Press OK to select satellites"
+msgstr "Drücken Sie OK, um den Satelliten auszuwählen"
+
+# Satconfig.py
+msgid "Positioner (selecting satellites)"
+msgstr "Positioner (Satelliten auswählen)"
+
+#: ParentalControlSetup.py:109 (4.2)
+msgid "Reload black-/white lists"
+msgstr "\"schwarz/weiß\" Liste neu laden"
+
+#: ParentalControlSetup.py:204 (4.2)
+msgid "Parental control editor"
+msgstr "Jugendschutz Editor"
+
+#: ParentalControlSetup.py:74
+msgid "Hide parentel locked services"
+msgstr "Jugendschutz geschützte Kanäle verbergen"
+
+#: ParentalControlSetup.py:75
+msgid "Protect on epg age"
+msgstr "Schützen durch EPG-Altersangaben"
+
+#: ParentalControlSetup.py:76
+msgid "Reload blacklists"
+msgstr "\"scharze\" Liste neu laden"
+
+#: ParentalControlSetup.py:78
+msgid "Protect Screens"
+msgstr "Bedienoberfläche schützen"
+
+#: ParentalControlSetup.py:90
+msgid "Protect context menus"
+msgstr "Kontextmenüs schützen"
+
+#: ParentalControlSetup.py:70 ParentalControlSetup.py:81
+msgid "Change PIN"
+msgstr "PIN ändern"
+
+#: ParentalControlSetup.py:176
+msgid "Re-enter new PIN"
+msgstr "Neue PIN wiederholen"
+
+#: ParentalControl
+msgid "No age block"
+msgstr "Keine Altersbeschränkung"
+
+#: extended GUI Menu
+msgid "Extended GUI"
+msgstr "Erweitertes GUI"
+
+# cablescan
+msgid "Enable auto cable scan"
+msgstr "Automatischer Kabel-Suchlauf"
+
+#: MovieSelection.py:1827
+msgid "Do you really want to move to trashcan ?"
+msgstr "Wollen Sie wirklich in den Papierkorb verschieben?"
+
+#: MovieSelection.py:1839 MovieSelection.py:1919 MovieSelection.py:1924
+#, python-format
+msgid "Do you really want to delete %s ?"
+msgstr ""
+"Wollen Sie \n"
+" %s\n"
+" wirklich löschen?"
+
+#: MovieSelection.py:1854
+msgid "Do you really want to permanently remove from trash can ?"
+msgstr "Wollen Sie wirklich dauerhaft aus dem Papierkorb entfernen?"
+
+#: MovieSelection.py:1856 MovieSelection.py:1903
+msgid "Do you really want to delete ?"
+msgstr "Wollen Sie wirklich löschen?"
+
+#: MovieSelection.py:633
+msgid "On end of movie (as menu)"
+msgstr "Am Ende des Films (als Menü)"
+
+#: MovieSelection.py:1318
+msgid "Sort list:"
+msgstr "Liste sortieren:"
+
+#: MovieSelection.py:1435
+#, python-format
+msgid "Directory %s does not exist."
+msgstr "Das Verzeichnis %s existiert nicht."
+
+#: MovieSelection.py:495
+msgid "Movie selection"
+msgstr "Filmauswahl"
+
+#: MovieSelection.py:209
+msgid "Clean network trash cans"
+msgstr "Netzwerk-Papierkörbe leeren"
+
+#: MovieSelection.py:214
+msgid "Number of rows to display"
+msgstr "Hier können Sie einstellen, wie viele Zeilen angezeigt werden sollen."
+
+#: MovieSelection.py:214
+msgid "Use the alternative screen"
+msgstr "Legen Sie fest, ob ein alternative Anzeige benutzt werden soll."
+
+#: MovieSelection.py:208
+msgid "Configure the number of days after which items are automatically removed from the trash can."
+msgstr "Hier können Sie festlegen, wie viele Tage der Inhalt vom Papierkorb erhalten bleibt, bis automatisch gelöscht wird."
+
+#: MovieSelection.py:209
+msgid "When enabled, network trash cans are probed for cleaning."
+msgstr "Hier können Sie festlegen, ob Netzwerk-Papierkörbe überprüft werden zum Löschen."
+
+#: MovieSelection.py:219
+msgid "Stop previous broadcasted service on return to movielist."
+msgstr "Hier können Sie auswählen, ob nach dem Stoppen zur Filmliste zurückgekehrt werden soll."
+
+#: MovieSelection.py:220
+msgid "Shows the watched status of the movie."
+msgstr "Hier können Sie einstellen, ob und wie der Filmfortschritt in der Filmliste angezeigt werden soll."
+
+#: MovieSelection.py:222
+msgid "Shows the icons when new/unseen, else will not show an icon."
+msgstr "Hier können Sie einstellen, ob und wie neue oder nicht angesehene Filme in der Filmliste angezeigt werden sollen."
+
+#: MovieSelection.py:225
+msgid "Allows you to hide the extensions of known file types."
+msgstr "Hier können Sie einstellen, ob die Dateiendungen von bekannten Dateiformaten ausgeblendet werden sollen."
+
+#: MovieSelection.py:228
+msgid "Allows you to setup the button to do what you choose."
+msgstr "Hier können Sie die Belegung der Tasten einstellen."
