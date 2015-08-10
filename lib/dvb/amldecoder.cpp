@@ -398,7 +398,24 @@ void eAMLTSMPEGDecoder::demux_event(int event)
 RESULT eAMLTSMPEGDecoder::getPTS(int what, pts_t &pts)
 {
 	TRACE__
-	return 0;
+	if (m_codec.handle >= 0)
+	{
+		if (what == 0) /* auto */
+			what = m_codec.has_video ? 1 : 2;
+
+		if (what == 1) /* video */
+		{			
+			pts = codec_get_vpts(&m_codec);		
+			return 0;
+		}
+
+		if (what == 2) /* audio */
+		{			
+			pts = codec_get_apts(&m_codec);
+			return 0;
+		}
+	}
+	return -1;
 }
 
 RESULT eAMLTSMPEGDecoder::setRadioPic(const std::string &filename)
