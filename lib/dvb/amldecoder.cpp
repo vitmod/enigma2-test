@@ -71,6 +71,10 @@ eAMLTSMPEGDecoder::eAMLTSMPEGDecoder(eDVBDemux *demux, int decoder)
 	memset(&m_codec, 0, sizeof(codec_para_t ));
 	CONNECT(m_showSinglePicTimer->timeout, eAMLTSMPEGDecoder::finishShowSinglePic);
 	m_state = stateStop;
+	
+	if (m_demux && m_decoder == 0)	// Tuxtxt caching actions only on primary decoder
+		eTuxtxtApp::getInstance()->initCache();
+		
 }
 
 eAMLTSMPEGDecoder::~eAMLTSMPEGDecoder()
@@ -80,6 +84,9 @@ eAMLTSMPEGDecoder::~eAMLTSMPEGDecoder()
  	m_vpid = m_apid = m_pcrpid = m_textpid = pidNone;
 	m_changed = -1;
 	setState();
+	
+	if (m_demux && m_decoder == 0)	// Tuxtxt caching actions only on primary decoder
+		eTuxtxtApp::getInstance()->freeCache();
 
 	codec_close(&m_codec);
 }
