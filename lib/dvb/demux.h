@@ -6,6 +6,7 @@
 #include <lib/dvb/idemux.h>
 #include <lib/base/filepush.h>
 #include <lib/dvb/pvrparse.h>
+#include <lib/dvb/decsa.h>
 
 class eDVBDemux: public iDVBDemux
 {
@@ -33,8 +34,13 @@ public:
 	int openDVR(int flags);
 
 	int getRefCount() { return ref; }
+
+	RESULT setCaDescr(ca_descr_t *ca_descr, bool initial);
+	RESULT setCaPid(ca_pid_t *ca_pid);
+	bool decrypt(uint8_t *data, int len, int &packetsCount);
 private:
 	int adapter, demux, source;
+	cDeCSA *decsa;
 
 	int m_dvr_busy;
 	friend class eDVBSectionReader;
