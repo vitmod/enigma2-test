@@ -47,10 +47,12 @@ eDVBDemux::eDVBDemux(int adapter, int demux):
 	source(-1),
 	m_dvr_busy(0)
 {
+	decsa = new cDeCSA(adapter, demux);
 }
 
 eDVBDemux::~eDVBDemux()
 {
+	delete decsa;
 }
 
 int eDVBDemux::openDemux(void)
@@ -184,6 +186,20 @@ RESULT eDVBDemux::connectEvent(const Slot1<void,int> &event, ePtr<eConnection> &
 {
 	conn = new eConnection(this, m_event.connect(event));
 	return 0;
+}
+
+RESULT eDVBDemux::setCaDescr(ca_descr_t *ca_descr, bool initial)
+{
+	return decsa->SetDescr(ca_descr, initial);
+}
+
+RESULT eDVBDemux::setCaPid(ca_pid_t *ca_pid)
+{
+	return decsa->SetCaPid(ca_pid);
+}
+
+bool eDVBDemux::decrypt(uint8_t *data, int len, int &packetsCount) {
+	return decsa->Decrypt(data, len, packetsCount);
 }
 
 void eDVBSectionReader::data(int)
