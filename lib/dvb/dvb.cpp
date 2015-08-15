@@ -1479,6 +1479,22 @@ bool eDVBResourceManager::canMeasureFrontendInputPower()
 	return false;
 }
 
+// openpliPC
+RESULT eDVBResourceManager::getAdapterDemux(ePtr<eDVBDemux> &demux, int adapter_nr, int demux_nr)
+{
+	eSmartPtrList<iDVBAdapter>::iterator i(m_adapter.begin());
+
+	while (adapter_nr && (i != m_adapter.end())) {
+		--adapter_nr;
+		++i;
+	}
+
+	if (i != m_adapter.end())
+		return i->getDemux(demux, demux_nr);
+	else
+		return -1;
+}
+
 class eDVBChannelFilePush: public eFilePushThread
 {
 public:

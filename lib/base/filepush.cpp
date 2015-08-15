@@ -429,6 +429,17 @@ void eFilePushThreadRecorder::start(int fd)
 	run();
 }
 
+void eFilePushThreadRecorder::start(int fd, ePtr<eDVBDemux> &demux)
+{
+	eDecryptRawFile *f = new eDecryptRawFile();
+	m_source = f;
+	f->setfd(fd);
+	f->setDemux(demux);
+	m_fd_source = 0;
+	m_stop = 0;
+	run();
+}
+
 void eFilePushThreadRecorder::stop()
 {
 	/* if we aren't running, don't bother stopping. */

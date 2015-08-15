@@ -54,7 +54,7 @@ enigma2_LDADD = \
 	@LIBDDVD_LIBS@ \
 	@AMLPLAYER_LIBS@ \
 	@DVBCSA_LIBS@ \
-	-ltuxtxt -ltuxtxt32bpp -lcrypt -lrt -ldl
+	-ltuxtxt -ltuxtxt32bpp -lcrypt -lnl-3 -lrt -ldl
 
 if ENABLE_SH
 enigma2_LDADD += -lmmeimage

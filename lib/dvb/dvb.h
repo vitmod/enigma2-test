@@ -246,6 +246,7 @@ public:
 	PyObject *setFrontendSlotInformations(SWIG_PYOBJECT(ePyObject) list);
 	bool frontendIsCompatible(int index, const char *type);
 	void setFrontendType(int index, const char *type);
+	RESULT getAdapterDemux(ePtr<eDVBDemux> &demux, int adapter_nr, int demux_nr);
 };
 SWIG_TEMPLATE_TYPEDEF(ePtr<eDVBResourceManager>, eDVBResourceManager);
 SWIG_EXTEND(ePtr<eDVBResourceManager>,
